@@ -79,9 +79,9 @@
           <h1 class="title is-1 publication-title">G3DST: Generalizing 3D Style Transfer with Neural Radiance Fields across Scenes and Styles</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://google.com">Adil Meric</a>,</span>
+              <a href="https://github.com/mericadil">Adil Meric</a>,</span>
             <span class="author-block">
-              <a href="https://google.com">Umut Kocasari</a>,</span>
+              <a href="https://kocasariumut.github.io/">Umut Kocasari</a>,</span>
             <span class="author-block">
               <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>,
             <span class="author-block">
@@ -124,6 +124,15 @@
                   <span>Video</span>
                 </a>
               </span>
+              <span class="link-block">
+                <a href="https://github.com/mericadil"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
             </div>
 
           </div>
@@ -132,6 +141,43 @@
     </div>
   </div>
 </section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.jpeg">
+      <h2 class="subtitle has-text-centered">
+        Given a set of source views and a style image, our method renders view-consistent, stylized novel views without any per-scene or per-style optimization.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Neural Radiance Fields (NeRF) have emerged as a powerful tool for creating highly detailed and photorealistic scenes. Existing methods for NeRF-based 3D style transfer need extensive per-scene optimization for single or multiple styles, limiting the applicability and efficiency of 3D style transfer. In this work, we overcome the limitations of existing methods by rendering stylized novel views from a NeRF without the need for per-scene or per-style optimization. To this end, we take advantage of a generalizable NeRF model to facilitate style transfer in 3D, thereby enabling the use of a single learned model across various scenes. By incorporating a hypernetwork into a generalizable NeRF, our approach enables on-the-fly generation of stylized novel views. Moreover, we introduce a novel flow-based multi-view consistency loss to preserve consistency across multiple views. We evaluate our method across various scenes and artistic styles and show its performance in generating high-quality and multi-view consistent stylized images without the need for a scene-specific implicit model. Our findings demonstrate that this approach not only achieves a good visual quality comparable to that of per-scene methods but also significantly enhances efficiency and applicability, marking a notable advancement in the field of 3D style transfer.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="has-text-centered">
+        <h2 class="title is-3">Framework</h2></div>
+        <div>
+            <img src="./static/images/main_figure.png">
+        </div>
+        <p>
+          We utilize a hypernetwork to apply a style transformation to the features of a generalizable transformer-based NeRF. The hypernetwork takes a style latent vector as input and outputs weights and biases of an intermediate MLP, which stylizes the aggregated ray features. This operation is repeated for each ray in the image to produce a high quality stylized image. We calculate the optical flow between source views and minimize the difference between corresponding pixels in stylized images.
+        </p>
+      </div>
+    </div>
 
 <h1 class="subtitle has-text-centered">
     <span class="dnerf">Coming Soon...</span>
